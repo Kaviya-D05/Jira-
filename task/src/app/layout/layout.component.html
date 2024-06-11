@@ -1,0 +1,81 @@
+<div class="toolbar-container">
+    <mat-toolbar color="primary" class="top-toolbar">
+        <!-- Icon with text -->
+        <mat-icon>home</mat-icon>
+        <span>lato</span>
+       
+        <span class="spacer"></span>
+        
+        <!-- Toolbar list -->
+        <div class="toolbar-list">
+            <button mat-button [routerLink]="'/'">Your work <mat-icon>arrow_drop_down</mat-icon></button>
+            <button mat-button [routerLink]="'/'">Projects<mat-icon>arrow_drop_down</mat-icon></button>
+            <button mat-button [routerLink]="'/'">Filters<mat-icon>arrow_drop_down</mat-icon></button>
+            <button mat-button [routerLink]="'/'">Dashboards<mat-icon>arrow_drop_down</mat-icon></button>
+            <button mat-button [routerLink]="'/'">Teams<mat-icon>arrow_drop_down</mat-icon></button>
+            <button mat-button [routerLink]="'/'">Plans<mat-icon>arrow_drop_down</mat-icon></button>
+            <button mat-button [routerLink]="'/'">Apps<mat-icon>arrow_drop_down</mat-icon></button>
+        </div>
+        
+        <button class="blue-button" [routerLink]="'/'">Create</button>
+        
+        <!-- Search -->
+        <mat-icon>search</mat-icon>
+        <input type="search" placeholder="Search">
+        
+        <!-- Notification icon -->
+        <button mat-icon-button aria-label="Notifications" matTooltip="Notifications">
+            <mat-icon>notifications</mat-icon>
+        </button>
+        <!-- Help icon -->
+        <button mat-icon-button aria-label="Help" matTooltip="Help">
+            <mat-icon>help</mat-icon>
+        </button>
+        <!-- Settings icon -->
+        <button mat-icon-button aria-label="Settings" matTooltip="Settings">
+            <mat-icon>settings</mat-icon>
+        </button>
+        <!-- User profile icon -->
+        <button mat-icon-button aria-label="Your Profile" matTooltip="Your Profile">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+    </mat-toolbar>
+</div>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <mat-nav-list>
+        <mat-list-item>
+            <mat-icon mat-list-icon>timeline</mat-icon>
+            <a mat-line routerLink="/">TimeLine</a>
+          </mat-list-item>
+          
+          <mat-list-item>
+            <mat-icon mat-list-icon>dashboard</mat-icon>
+            <a mat-line routerLink="/board">Board</a>
+          </mat-list-item>
+          
+          <mat-list-item>
+            <mat-icon mat-list-icon>list</mat-icon>
+            <a mat-line routerLink="/list">List</a>
+          </mat-list-item>
+          
+          <mat-list-item>
+            <mat-icon mat-list-icon>report_problem</mat-icon>
+            <a mat-line routerLink="/Issues">Issues</a>
+          </mat-list-item>
+
+          <mat-list-item>
+            <mat-icon>add</mat-icon>
+            <a mat-line routerLink="/Issues">Add  View</a>
+          </mat-list-item>
+          
+          
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content">
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
