@@ -1,0 +1,72 @@
+
+<h3>Projects/My Kanban board</h3>   
+
+<h1><strong>Kan Board</strong></h1>
+<div class="search-bar">
+  <input type="search" placeholder="Search">
+  <button mat-icon-button aria-label="Add People" class="people-button">
+    <mat-icon>person</mat-icon>
+  </button>
+</div>
+
+<div class="button-group">
+    <h3>Group by</h3>
+    <div class="button-wrapper">
+      <button><mat-icon>arrow_drop_down</mat-icon><span>None</span></button>
+      <button><mat-icon>work</mat-icon><span>Import Work</span></button>
+      <button><mat-icon>insights</mat-icon><span>Insights</span></button>
+      <button><mat-icon>settings</mat-icon><span>View Settings</span></button>
+    </div>
+  </div>
+  
+
+<div class="icon-bar">
+    <button mat-icon-button aria-label="Automation">
+      <mat-icon>automation</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Add to Starred">
+      <mat-icon>star</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Share">
+      <mat-icon>share</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Enter Full Screen">
+      <mat-icon>fullscreen</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="More Options">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </div>
+
+
+
+<div class="task-board">
+  <!-- Columns -->
+  <div class="column">
+    <h3>In Progress</h3>
+    <!-- Task input for creating a new issue -->
+    <div>
+      <input type="text" [(ngModel)]="newInProgressTask" placeholder="Create new issue">
+      <button mat-button (click)="addInProgressTask()">Create</button>
+    </div>
+    <div cdkDropList [cdkDropListData]="inProgress" class="task-list" (cdkDropListDropped)="drop($event, 'inProgress')">
+      <div *ngFor="let task of inProgress" cdkDrag class="task-item">{{ task }}</div>
+    </div>
+  </div>
+
+  <!-- To Do column -->
+  <div class="column">
+    <h3>To Do</h3>
+    <div cdkDropList [cdkDropListData]="todo" class="task-list" (cdkDropListDropped)="drop($event, 'todo')">
+      <div *ngFor="let task of todo" cdkDrag class="task-item">{{ task }}</div>
+    </div>
+  </div>
+
+  <!-- Done column -->
+  <div class="column">
+    <h3>Done</h3>
+    <div cdkDropList [cdkDropListData]="done" class="task-list" (cdkDropListDropped)="drop($event, 'done')">
+      <div *ngFor="let task of done" cdkDrag class="task-item">{{ task }}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+.task-board {
+  display: flex;
+  justify-content: space-around;
+}
+
+.column {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-top: -10px;
+}
+
+.task-list {
+  min-height: 200px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.task-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  cursor: grab;
+}
+
+.icon-bar {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+  }
+  
+  .icon-bar button {
+    margin-left: 8px; /* Adjust as needed for spacing between icons */
+  }
+  
+  .search-bar {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    margin-right: 10px; /* Adjust as needed */
+    margin-top: 50px;
+  }
+  
+  .people-button {
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    margin-left: -19px; /* Adjust as needed */
+    margin-bottom: 10px;
+    margin-top: 50px;
+  }
+  .button-group {
+    float: right;
+    margin-top: 10px; /* Adjust margin-top as needed */
+  }
+  
+  .button-group h3 {
+    margin-bottom: 5px; /* Adjust margin-bottom as needed */
+  }
+  
+  .button-wrapper {
+    display: flex;
+  }
+  
+  .button-wrapper button {
+    margin-left: 10px; /* Adjust margin-left as needed */
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button-wrapper button span {
+    margin-left: 5px; /* Adjust margin-left as needed */
+  }
+  
